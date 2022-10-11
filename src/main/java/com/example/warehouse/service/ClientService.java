@@ -2,7 +2,6 @@ package com.example.warehouse.service;
 
 import com.example.warehouse.domain.Client;
 import com.example.warehouse.repository.ClientRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
