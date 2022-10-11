@@ -34,7 +34,7 @@ public class SecurtyConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("api/clients/*").hasAnyRole("Admin","User")
                 .anyRequest().authenticated()
                 .and()
-                .httpBasic();
+                .formLogin();
     }
 
     @Bean
