@@ -1,6 +1,5 @@
 package com.example.warehouse.controller;
 
-import com.example.warehouse.domain.Supplier;
 import com.example.warehouse.domain.User;
 import com.example.warehouse.service.UserService;
 import org.springframework.http.ResponseEntity;
@@ -32,13 +31,13 @@ public class UserController {
         return ResponseEntity.status(200).body(null);
     }
 
-    @DeleteMapping("/suppliers/{id}")
+    @DeleteMapping("/user/{id}")
     public ResponseEntity<?> deleteById(@PathVariable Long id){
         userService.delete(id);
         return ResponseEntity.ok(id);
     }
 
-    @PostMapping("/suppliers/{id}")
+    @PostMapping("/user/{id}")
     public ResponseEntity<?> edit(@PathVariable User user){
         userService.edit(user);
         return ResponseEntity.ok(user);

@@ -2,7 +2,6 @@ package com.example.warehouse.controller;
 
 import com.example.warehouse.domain.Client;
 import com.example.warehouse.service.ClientService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
