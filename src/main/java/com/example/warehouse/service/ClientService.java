@@ -2,10 +2,7 @@ package com.example.warehouse.service;
 
 import com.example.warehouse.domain.Client;
 import com.example.warehouse.repository.ClientRepository;
-<<<<<<< HEAD
 import org.springframework.beans.factory.annotation.Autowired;
-=======
->>>>>>> 92967dd (My first project)
 import org.springframework.stereotype.Service;
 
 import java.util.List;
