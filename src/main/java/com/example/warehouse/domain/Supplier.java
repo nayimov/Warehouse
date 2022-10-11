@@ -19,7 +19,7 @@ public class Supplier {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private Long active;
+    private boolean active;
     private String phoneNumber;
     @OneToMany(mappedBy = "supplier")
     private Set<Input> inputs;

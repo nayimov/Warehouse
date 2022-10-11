@@ -1,6 +1,5 @@
 package com.example.warehouse.controller;
 
-import com.example.warehouse.domain.Product;
 import com.example.warehouse.domain.Supplier;
 import com.example.warehouse.service.SupplierService;
 import org.springframework.http.ResponseEntity;
