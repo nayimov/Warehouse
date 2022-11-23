@@ -1,0 +1,25 @@
+
+
+
+
+WWWWWWWW                           WWWWWWWW                                                     hhhhhhh
+W::::::W                           W::::::W                                                     h:::::h
+W::::::W                           W::::::W                                                     h:::::h
+W::::::W                           W::::::W                                                     h:::::h
+ W:::::W           WWWWW           W:::::Waaaaaaaaaaaaa  rrrrr   rrrrrrrrr       eeeeeeeeeeee    h::::h hhhhh          ooooooooooo   uuuuuu    uuuuuu      ssssssssss       eeeeeeeeeeee
+  W:::::W         W:::::W         W:::::W a::::::::::::a r::::rrr:::::::::r    ee::::::::::::ee  h::::hh:::::hhh     oo:::::::::::oo u::::u    u::::u    ss::::::::::s    ee::::::::::::ee
+   W:::::W       W:::::::W       W:::::W  aaaaaaaaa:::::ar:::::::::::::::::r  e::::::eeeee:::::eeh::::::::::::::hh  o:::::::::::::::ou::::u    u::::u  ss:::::::::::::s  e::::::eeeee:::::ee
+    W:::::W     W:::::::::W     W:::::W            a::::arr::::::rrrrr::::::re::::::e     e:::::eh:::::::hhh::::::h o:::::ooooo:::::ou::::u    u::::u  s::::::ssss:::::se::::::e     e:::::e
+     W:::::W   W:::::W:::::W   W:::::W      aaaaaaa:::::a r:::::r     r:::::re:::::::eeeee::::::eh::::::h   h::::::ho::::o     o::::ou::::u    u::::u   s:::::s  ssssss e:::::::eeeee::::::e
+      W:::::W W:::::W W:::::W W:::::W     aa::::::::::::a r:::::r     rrrrrrre:::::::::::::::::e h:::::h     h:::::ho::::o     o::::ou::::u    u::::u     s::::::s      e:::::::::::::::::e
+       W:::::W:::::W   W:::::W:::::W     a::::aaaa::::::a r:::::r            e::::::eeeeeeeeeee  h:::::h     h:::::ho::::o     o::::ou::::u    u::::u        s::::::s   e::::::eeeeeeeeeee
+        W:::::::::W     W:::::::::W     a::::a    a:::::a r:::::r            e:::::::e           h:::::h     h:::::ho::::o     o::::ou:::::uuuu:::::u  ssssss   s:::::s e:::::::e
+         W:::::::W       W:::::::W      a::::a    a:::::a r:::::r            e::::::::e          h:::::h     h:::::ho:::::ooooo:::::ou:::::::::::::::uus:::::ssss::::::se::::::::e
+          W:::::W         W:::::W       a:::::aaaa::::::a r:::::r             e::::::::eeeeeeee  h:::::h     h:::::ho:::::::::::::::o u:::::::::::::::us::::::::::::::s  e::::::::eeeeeeee
+           W:::W           W:::W         a::::::::::aa:::ar:::::r              ee:::::::::::::e  h:::::h     h:::::h oo:::::::::::oo   uu::::::::uu:::u s:::::::::::ss    ee:::::::::::::e
+            WWW             WWW           aaaaaaaaaa  aaaarrrrrrr                eeeeeeeeeeeeee  hhhhhhh     hhhhhhh   ooooooooooo       uuuuuuuu  uuuu  sssssssssss        eeeeeeeeeeeeee
+
+
+
+${AnsiColor.BRIGHT_BLUE}:: JHipster 🤓  :: Running Spring Boot ${spring-boot.version} ::
+:: https://www.jhipster.tech ::${AnsiColor.DEFAULT}

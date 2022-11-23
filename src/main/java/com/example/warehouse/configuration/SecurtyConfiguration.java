@@ -18,9 +18,15 @@ public class SecurtyConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
         authenticationManagerBuilder
                 .inMemoryAuthentication()
-                .withUser("admin").password(passwordEncoder().encode("123")).roles("Admin")
+                .withUser("admin")
+                .password(passwordEncoder()
+                        .encode("admin123"))
+                .roles("Admin")
                 .and()
-                .withUser("user").password(passwordEncoder().encode("321")).roles("User");
+                .withUser("user")
+                .password(passwordEncoder()
+                        .encode("u$er"))
+                .roles("User");
     }
 
 
@@ -29,9 +35,9 @@ public class SecurtyConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure( HttpSecurity httpSecurity) throws Exception {
         httpSecurity
                 .authorizeRequests()
-                .antMatchers("/api/clients/all").permitAll()
-                .antMatchers("/api/clients").hasRole("Admin")
-                .antMatchers("api/clients/*").hasAnyRole("Admin","User")
+                .antMatchers("/api/users/all").permitAll()
+                .antMatchers("/api/users").hasRole("Admin")
+                .antMatchers("api/users/*").hasAnyRole("Admin","User")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin();
