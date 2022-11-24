@@ -32,13 +32,13 @@ public class UserController {
     }
 
     @DeleteMapping("/user/{id}")
-    public ResponseEntity<?> deleteById(@PathVariable Long id){
+    public ResponseEntity<?> deleteById(@PathVariable Long id) {
         userService.delete(id);
         return ResponseEntity.ok(id);
     }
 
     @PostMapping("/user/{id}")
-    public ResponseEntity<?> edit(@PathVariable User user){
+    public ResponseEntity<?> edit(@PathVariable User user) {
         userService.edit(user);
         return ResponseEntity.ok(user);
     }

@@ -14,20 +14,23 @@ public class OutputService {
         this.outputRepository = outputRepository;
     }
 
-    public void save(Output output){
-         outputRepository.save(output);
+    public void save(Output output) {
+        outputRepository.save(output);
     }
-    public Output getById(Long id){
+
+    public Output getById(Long id) {
         return outputRepository.getById(id);
     }
 
-    public List<Output> getAll(){
+    public List<Output> getAll() {
         return outputRepository.findAll();
     }
-    public void edit(Output output){
+
+    public void edit(Output output) {
         outputRepository.save(output);
     }
-    public void delete(Long id){
+
+    public void delete(Long id) {
         outputRepository.deleteById(id);
     }
 }

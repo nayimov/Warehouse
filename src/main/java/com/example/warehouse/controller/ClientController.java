@@ -29,14 +29,15 @@ public class ClientController {
         clientService.saveClient(client);
         return ResponseEntity.status(200).body(null);
     }
+
     @DeleteMapping("/clients/{id}")
-    public ResponseEntity<?> deleteById(@PathVariable Long id){
+    public ResponseEntity<?> deleteById(@PathVariable Long id) {
         clientService.delete(id);
         return ResponseEntity.ok(id);
     }
 
     @PostMapping("/clients/{id}")
-    public ResponseEntity<?> edit(@PathVariable Client client){
+    public ResponseEntity<?> edit(@PathVariable Client client) {
         clientService.edit(client);
         return ResponseEntity.ok(client);
     }

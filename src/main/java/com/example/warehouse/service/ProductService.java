@@ -8,7 +8,7 @@ import java.util.List;
 
 @Service
 public class ProductService {
-private ProductRepository productRepository;
+    private ProductRepository productRepository;
 
 
     public ProductService(ProductRepository productRepository) {
@@ -16,20 +16,23 @@ private ProductRepository productRepository;
     }
 
 
-    public void save(Product product){
+    public void save(Product product) {
         productRepository.save(product);
     }
-    public Product getById(Long id){
+
+    public Product getById(Long id) {
         return (Product) productRepository.getById(id);
     }
 
-    public List<Product> getAll(){
+    public List<Product> getAll() {
         return productRepository.findAll();
     }
-    public void edit(Product product){
+
+    public void edit(Product product) {
         productRepository.save(product);
     }
-    public void delete(Long id){
+
+    public void delete(Long id) {
         productRepository.deleteById(id);
     }
 }

@@ -17,9 +17,11 @@ public class UserService {
     public void saveUser(User user) {
         userRepository.save(user);
     }
-    public List<User> getAll(){
+
+    public List<User> getAll() {
         return userRepository.findAll();
     }
+
     public void edit(User user) {
         userRepository.save(user);
     }

@@ -29,18 +29,18 @@ public class ProductController {
         productService.save(product);
         return ResponseEntity.status(200).body(null);
     }
+
     @DeleteMapping("/products/{id}")
-    public ResponseEntity<?> deleteById(@PathVariable Long id){
+    public ResponseEntity<?> deleteById(@PathVariable Long id) {
         productService.delete(id);
         return ResponseEntity.ok(id);
     }
 
     @PostMapping("/products/{id}")
-    public ResponseEntity<?> edit(@PathVariable Product product){
+    public ResponseEntity<?> edit(@PathVariable Product product) {
         productService.edit(product);
         return ResponseEntity.ok(product);
     }
-
 
 
 }

@@ -13,6 +13,7 @@ class AttachmentContentController {
     public AttachmentContentController(AttachmentContentService attachmentContentService) {
         this.attachmentContentService = attachmentContentService;
     }
+
     @GetMapping()
     public ResponseEntity<?> getAll() {
         return ResponseEntity.status(200).body(attachmentContentService.getAll());
@@ -28,14 +29,15 @@ class AttachmentContentController {
         attachmentContentService.save(attachmentContent);
         return ResponseEntity.status(200).body(null);
     }
-@DeleteMapping("/AttachmentContent/{id}")
-    public ResponseEntity<?> deleteById(@PathVariable Long id){
+
+    @DeleteMapping("/AttachmentContent/{id}")
+    public ResponseEntity<?> deleteById(@PathVariable Long id) {
         attachmentContentService.delete(id);
         return ResponseEntity.ok(id);
-}
+    }
 
     @PostMapping("/AttachmentContent/{id}")
-    public ResponseEntity<?> edit(@PathVariable AttachmentContent  attachmentContent){
+    public ResponseEntity<?> edit(@PathVariable AttachmentContent attachmentContent) {
         attachmentContentService.edit(attachmentContent);
         return ResponseEntity.ok(attachmentContent);
     }

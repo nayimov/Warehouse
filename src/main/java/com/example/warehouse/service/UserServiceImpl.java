@@ -10,36 +10,37 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 @Transactional
 @Slf4j
-public class UserServiceImpl implements UsersService{
+public class UserServiceImpl implements ImployeeService {
     private final UserRepository userRepository;
     private final RoleRepository roleRepository;
 
     @Override
     public User saveUser(User user) {
-        log.info("Saving new user {} to database",user.getFirstName());
+        log.info("Saving new user {} to database", user.getFirstName());
         return userRepository.save(user);
     }
 
     @Override
     public Role saveRole(Role role) {
-        log.info("Saving new role {} to database",role.getName());
+        log.info("Saving new role {} to database", role.getName());
         return roleRepository.save(role);
     }
 
     @Override
     public void addRoleToUser(String firstname, String roleName) {
-        log.info("Adding user {} to role {}",firstname,roleName);
-        User user=userRepository.findByFirstName(firstname);
-        Role role=roleRepository.findByName(roleName);
+        log.info("Adding user {} to role {}", firstname, roleName);
+        User user = userRepository.findByFirstName(firstname);
+        Role role = roleRepository.findByName(roleName);
     }
 
     @Override
     public User getUser(String firstname) {
-        log.info("Fetching user {}",firstname);
+        log.info("Fetching user {}", firstname);
         return userRepository.findByFirstName(firstname);
     }
 
