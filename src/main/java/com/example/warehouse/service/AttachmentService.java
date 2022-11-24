@@ -2,11 +2,11 @@ package com.example.warehouse.service;
 
 import com.example.warehouse.domain.Attachment;
 import com.example.warehouse.repository.AttachmentRepository;
-import org.aspectj.apache.bcel.classfile.NestHost;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
+
 @Service
 public class AttachmentService {
 
@@ -15,6 +15,7 @@ public class AttachmentService {
     public AttachmentService(AttachmentRepository attachmentRepository) {
         this.attachmentRepository = attachmentRepository;
     }
+
     public void save(Attachment attachment) {
         attachmentRepository.save(attachment);
     }
@@ -32,6 +33,6 @@ public class AttachmentService {
     }
 
     public Attachment getById(Long id) {
-        return attachmentRepository.findById(id).orElseThrow(()->new EntityNotFoundException("entity with this id "+id+ " not found"));
+        return attachmentRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("entity with this id " + id + " not found"));
     }
 }

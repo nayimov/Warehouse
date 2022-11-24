@@ -15,21 +15,23 @@ public class InputProductService {
         this.inputProductRepository = inputProductRepository;
     }
 
-    public void  save(InputProduct inputProduct){
+    public void save(InputProduct inputProduct) {
         inputProductRepository.save(inputProduct);
     }
 
-    public InputProduct getById(Long id){
+    public InputProduct getById(Long id) {
         return inputProductRepository.getById(id);
     }
-    public List<InputProduct> getAll(){
+
+    public List<InputProduct> getAll() {
         return inputProductRepository.findAll();
     }
 
-    public void edit(InputProduct inputProduct){
+    public void edit(InputProduct inputProduct) {
         inputProductRepository.save(inputProduct);
     }
-    public void delete(Long id){
+
+    public void delete(Long id) {
         inputProductRepository.deleteById(id);
     }
 

@@ -4,6 +4,7 @@ import com.example.warehouse.domain.Measurement;
 import com.example.warehouse.service.MeasurementService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 @RestController
 @RequestMapping("/api/Measurement")
 public class MeasurementController {
@@ -30,13 +31,13 @@ public class MeasurementController {
     }
 
     @DeleteMapping("/Measurement/{id}")
-    public ResponseEntity<?> deleteById(@PathVariable Long id){
+    public ResponseEntity<?> deleteById(@PathVariable Long id) {
         measurementService.delete(id);
         return ResponseEntity.ok(id);
     }
 
     @PostMapping("/Measurement/{id}")
-    public ResponseEntity<?> edit(@PathVariable Measurement measurement){
+    public ResponseEntity<?> edit(@PathVariable Measurement measurement) {
         measurementService.edit(measurement);
         return ResponseEntity.ok(measurement);
     }

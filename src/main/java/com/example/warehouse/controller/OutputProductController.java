@@ -1,6 +1,5 @@
 package com.example.warehouse.controller;
 
-import com.example.warehouse.domain.Output;
 import com.example.warehouse.domain.OutputProduct;
 import com.example.warehouse.service.OutputProductService;
 import org.springframework.http.ResponseEntity;
@@ -32,13 +31,13 @@ public class OutputProductController {
     }
 
     @DeleteMapping("/outputProduct/{id}")
-    public ResponseEntity<?> deleteById(@PathVariable Long id){
+    public ResponseEntity<?> deleteById(@PathVariable Long id) {
         outputProductService.delete(id);
         return ResponseEntity.ok(id);
     }
 
     @PostMapping("/outputProduct/{id}")
-    public ResponseEntity<?> edit(@PathVariable  OutputProduct outputProduct){
+    public ResponseEntity<?> edit(@PathVariable OutputProduct outputProduct) {
         outputProductService.edit(outputProduct);
         return ResponseEntity.ok(outputProduct);
     }

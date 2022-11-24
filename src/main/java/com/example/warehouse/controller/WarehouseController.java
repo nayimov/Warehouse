@@ -15,27 +15,29 @@ public class WarehouseController {
     }
 
     @GetMapping
-    public ResponseEntity<?> getAll(){
+    public ResponseEntity<?> getAll() {
         return ResponseEntity.status(200).body(warehouseService.getAll());
     }
+
     @GetMapping("/{id}")
-    public ResponseEntity<?> getById(@PathVariable Long id){
+    public ResponseEntity<?> getById(@PathVariable Long id) {
         return ResponseEntity.status(200).body(warehouseService.getById(id));
     }
+
     @PostMapping
-    public ResponseEntity<?> save(@RequestBody Warehouse warehouse){
+    public ResponseEntity<?> save(@RequestBody Warehouse warehouse) {
         warehouseService.edit(warehouse);
         return ResponseEntity.status(200).body(null);
     }
 
     @DeleteMapping("/Warehouse/{id}")
-    public ResponseEntity<?> deleteById(@PathVariable Long id){
+    public ResponseEntity<?> deleteById(@PathVariable Long id) {
         warehouseService.delete(id);
         return ResponseEntity.ok(id);
     }
 
     @PostMapping("/Warehouse/{id}")
-    public ResponseEntity<?> edit(@PathVariable Warehouse warehouse){
+    public ResponseEntity<?> edit(@PathVariable Warehouse warehouse) {
         warehouseService.edit(warehouse);
         return ResponseEntity.ok(warehouse);
     }

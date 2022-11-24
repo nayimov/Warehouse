@@ -16,26 +16,29 @@ public class CurrenyController {
     }
 
     @GetMapping
-    public ResponseEntity<?> getAll(){
+    public ResponseEntity<?> getAll() {
         return ResponseEntity.status(200).body(currenyService.getAll());
     }
+
     @GetMapping("/{id}")
-    public ResponseEntity<?> getById(@PathVariable Long id){
+    public ResponseEntity<?> getById(@PathVariable Long id) {
         return ResponseEntity.status(200).body(currenyService.getById(id));
     }
+
     @PostMapping
-    public ResponseEntity<?> save(@RequestBody Currency currency){
-       currenyService.save(currency);
-       return ResponseEntity.status(200).body(null);
+    public ResponseEntity<?> save(@RequestBody Currency currency) {
+        currenyService.save(currency);
+        return ResponseEntity.status(200).body(null);
     }
+
     @DeleteMapping("/curreny/{id}")
-    public ResponseEntity<?> deleteById(@PathVariable Long id){
+    public ResponseEntity<?> deleteById(@PathVariable Long id) {
         currenyService.delete(id);
         return ResponseEntity.ok(id);
     }
 
     @PostMapping("/curreny/{id}")
-    public ResponseEntity<?> edit(@PathVariable Currency curreny){
+    public ResponseEntity<?> edit(@PathVariable Currency curreny) {
         currenyService.edit(curreny);
         return ResponseEntity.ok(curreny);
     }

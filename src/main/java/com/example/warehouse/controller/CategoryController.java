@@ -15,28 +15,29 @@ public class CategoryController {
     }
 
     @GetMapping
-    private ResponseEntity<?> getAll(){
+    private ResponseEntity<?> getAll() {
         return ResponseEntity.status(200).body(categoryService.getAll());
     }
 
     @GetMapping("/{id}")
-    private ResponseEntity<?> getBYId(@PathVariable Long id){
+    private ResponseEntity<?> getBYId(@PathVariable Long id) {
         return ResponseEntity.status(200).body(categoryService.getById(id));
     }
+
     @PostMapping
-    private ResponseEntity<?> save(@RequestBody Category category){
+    private ResponseEntity<?> save(@RequestBody Category category) {
         categoryService.save(category);
-        return   ResponseEntity.status(200).body(null);
+        return ResponseEntity.status(200).body(null);
     }
 
     @DeleteMapping("/Category/{id}")
-    public ResponseEntity<?> deleteById(@PathVariable Long id){
+    public ResponseEntity<?> deleteById(@PathVariable Long id) {
         categoryService.delete(id);
         return ResponseEntity.ok(id);
     }
 
     @PostMapping("/Category/{id}")
-    public ResponseEntity<?> edit(@PathVariable Category category){
+    public ResponseEntity<?> edit(@PathVariable Category category) {
         categoryService.edit(category);
         return ResponseEntity.ok(category);
     }

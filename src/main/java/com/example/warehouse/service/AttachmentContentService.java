@@ -14,6 +14,7 @@ public class AttachmentContentService {
     public AttachmentContentService(AttachmentContentRepository attachmentContentRepository) {
         this.attachmentContentRepository = attachmentContentRepository;
     }
+
     public void save(AttachmentContent attachmentContent) {
         attachmentContentRepository.save(attachmentContent);
     }
